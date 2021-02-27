@@ -112,7 +112,7 @@ func (n *ResponderInterceptor) resendPackets(nack *rtcp.TransportLayerNack) {
 					n.log.Warnf("failed resending nacked packet: %+v", err)
 				}
 			}
-
+			n.log.Warnf("resending nacked packet")
 			return true
 		})
 	}
